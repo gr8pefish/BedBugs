@@ -10,7 +10,7 @@ public class PacketHandler {
 
     public static void init() {
         int id = 0;
-        HANDLER.registerMessage(PacketServerKickPlayer.Handler.class, PacketServerKickPlayer.class, id, Side.SERVER);
+        HANDLER.registerMessage(PacketServerKickPlayer.Handler.class, PacketServerKickPlayer.class, id++, Side.SERVER);
         HANDLER.registerMessage(PacketServerLeaveBed.Handler.class, PacketServerLeaveBed.class, id, Side.SERVER);
     }
 
