@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 
 public class PacketServerKickPlayer implements IMessage {
 
-    public PacketServerKickPlayer() {} //default constructor is necessary
+    public PacketServerKickPlayer() {}
 
     @Override
     public void fromBytes(ByteBuf buf){
@@ -24,13 +24,13 @@ public class PacketServerKickPlayer implements IMessage {
 
         @Override
         public IMessage onMessage(PacketServerKickPlayer message, MessageContext ctx) {
-            System.out.println("kicking");
+
             try {
-                ctx.getServerHandler().playerEntity.connection.kickPlayerFromServer("Leaving bed (and server)");
+                ctx.getServerHandler().playerEntity.connection.kickPlayerFromServer("Leaving bed (and server).");
             } catch (Exception e) {
                 Logger.error("Can't kick player!");
             }
-            System.out.println("wtf");
+
             return null; //no return message
         }
     }

@@ -9,6 +9,6 @@ public class ModInfo {
     public static final String COMMON_PROXY = "gr8pefish.bedbugbuster.common.proxy.CommonProxy";
     public static final String CLIENT_PROXY = "gr8pefish.bedbugbuster.client.proxy.ClientProxy";
 
-    public static final String NETWORK_CHANNEL = "bedbugbustr";
+    public static final String NETWORK_CHANNEL = "bdbugbstr";
 
 }

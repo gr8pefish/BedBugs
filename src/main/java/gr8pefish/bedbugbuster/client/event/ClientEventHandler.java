@@ -3,6 +3,7 @@ package gr8pefish.bedbugbuster.client.event;
 import gr8pefish.bedbugbuster.client.gui.KickButton;
 import gr8pefish.bedbugbuster.common.network.PacketHandler;
 import gr8pefish.bedbugbuster.common.network.PacketServerKickPlayer;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiSleepMP;
 import net.minecraftforge.client.event.GuiScreenEvent;
@@ -28,9 +29,7 @@ public class ClientEventHandler {
     public void onClick(GuiScreenEvent.ActionPerformedEvent.Pre event) {
         if (event.getGui() instanceof GuiSleepMP) {
             if (event.getButton() instanceof KickButton) {
-                System.out.println("porque");
                 PacketHandler.HANDLER.sendToServer(new PacketServerKickPlayer());
-                System.out.println("Kicking player");
             }
         }
     }
