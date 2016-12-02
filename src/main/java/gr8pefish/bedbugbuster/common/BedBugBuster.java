@@ -27,13 +27,12 @@ public class BedBugBuster {
         //register packets
         PacketHandler.init();
 
+        //init client event handler
         proxy.preInit(event);
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
-
-        //init client event handler
         proxy.init(event);
     }
 

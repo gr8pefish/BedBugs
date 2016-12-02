@@ -14,13 +14,13 @@ public class ClientProxy implements IProxy {
 
     @Override
     public void preInit(FMLPreInitializationEvent event) {
-
+        //register client events
+        MinecraftForge.EVENT_BUS.register(new ClientEventHandler());
     }
 
     @Override
     public void init(FMLInitializationEvent event) {
-        //register client events
-        MinecraftForge.EVENT_BUS.register(new ClientEventHandler());
+
     }
 
     @Override
