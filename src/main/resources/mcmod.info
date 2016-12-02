@@ -1,0 +1,14 @@
+[{
+  "modid": "bedbugbuster",
+  "name": "Bed Bug Buster",
+  "description": "Adds a button to leave the bed/server when stuck!",
+  "version": "${version}",
+  "mcversion": "1.10.2",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["gr8pefish"],
+  "credits": "masa for some assistance",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}]

@@ -1,0 +1,34 @@
+To Do:
+
+    Add button to the side of sleep button in vanilla that 1) gets out of bed actually or 2) kicks from server
+
+    - add icon for fpp
+        - make it perspective projection compliant
+    - change icon for deployed to be the bars
+    - config file for tweaking simple values
+
+    NOW:
+        Fix player rendering
+            - jumpy for others
+            - inventoryGui render disable fancy rendering when going horizontal (how to do that?)
+            - figure out, personally, the gl code, so I understand it for the future
+
+    LATER:
+
+        DEFINITE:
+            Make model for bars hanging down.
+        MAYBE:
+            Add tiers of gliders?
+            Blow up the item perspective in fpp of wings to be huge?
+            add red/white dye to recipes?
+
+    EVENTUAL FEATURES:
+
+    BALANCE:
+        config (easy mode vs all these tweaks?)
+        Durability
+        Inaccuracy
+
+
+
+
