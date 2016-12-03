@@ -7,6 +7,7 @@ Additions
 Changes
 - Changed mod name to the simpler title of "Bed Bugs".
 - Kick button only appears after you click the button to leave your bed (i.e. only when it's needed).
+- Special handling for client/server/any combination of the two installs of this mod.
 - Changed position of kick button.
 
 Bug Fixes

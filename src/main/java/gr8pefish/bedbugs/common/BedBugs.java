@@ -8,9 +8,15 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkCheckHandler;
+import net.minecraftforge.fml.relauncher.Side;
 
-@Mod(modid = ModInfo.MODID, name = ModInfo.MOD_NAME, version = ModInfo.VERSION)
+import java.util.Map;
+
+@Mod(modid = ModInfo.MODID, name = ModInfo.MOD_NAME, version = ModInfo.VERSION, acceptableRemoteVersions = ModInfo.ACCEPTABLE_REMOTE_VERSION)
 public class BedBugs {
+
+    public static boolean isBedBugsPresentOnDedicatedServer;
 
     //Proxies
     @SidedProxy(clientSide = ModInfo.CLIENT_PROXY, serverSide = ModInfo.COMMON_PROXY)
@@ -39,6 +45,14 @@ public class BedBugs {
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
         proxy.postInit(event);
+    }
+
+    @NetworkCheckHandler
+    public boolean checkModList(final Map<String, String> versions, final Side side) {
+        if (side == Side.SERVER) { //remote party, "asking" from client
+            isBedBugsPresentOnDedicatedServer = versions.containsKey(ModInfo.MOD_NAME);
+        }
+        return true; //allow any client to connect, regardless of if they have the mod or not
     }
 
 }
