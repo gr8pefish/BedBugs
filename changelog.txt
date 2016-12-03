@@ -3,6 +3,7 @@ Version 1.10.2 - 1.0.1
 ------------------------------------------------------
 Additions
 - Added tooltip to the kick button to explain its usage.
+- Added server command to kick the player.
 
 Changes
 - Changed mod name to the simpler title of "Bed Bugs".

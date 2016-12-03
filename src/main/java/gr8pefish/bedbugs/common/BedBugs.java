@@ -1,5 +1,6 @@
 package gr8pefish.bedbugs.common;
 
+import gr8pefish.bedbugs.common.command.CommandKickPlayer;
 import gr8pefish.bedbugs.common.lib.ModInfo;
 import gr8pefish.bedbugs.common.network.PacketHandler;
 import gr8pefish.bedbugs.common.proxy.IProxy;
@@ -8,6 +9,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.network.NetworkCheckHandler;
 import net.minecraftforge.fml.relauncher.Side;
 
@@ -47,12 +49,20 @@ public class BedBugs {
         proxy.postInit(event);
     }
 
+
+    //===================================================Helper/other registering========================================================
+
     @NetworkCheckHandler
     public boolean checkModList(final Map<String, String> versions, final Side side) {
         if (side == Side.SERVER) { //remote party, "asking" from client
             isBedBugsPresentOnDedicatedServer = versions.containsKey(ModInfo.MOD_NAME);
         }
         return true; //allow any client to connect, regardless of if they have the mod or not
+    }
+
+    @Mod.EventHandler
+    public void onServerStart(FMLServerStartingEvent event) {
+        event.registerServerCommand(new CommandKickPlayer());
     }
 
 }
