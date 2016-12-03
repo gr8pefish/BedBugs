@@ -26,9 +26,6 @@ group = package_group
 archivesBaseName = mod_name
 version = "${mc_version}-${major_version}.${minor_version}.${build_number}"
 
-// Ignore this error. It'll work just fine when building.
-import org.ajoberstar.grgit.*
-
 repositories {
     maven { url "http://dvs1.progwml6.com/files/maven" }
 }
@@ -80,15 +77,6 @@ jar {
         "Implementation-Version": project.version
     )
 }
-
-// Javadoc jar
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    from javadoc.destinationDir
-    classifier = 'javadoc'
-}
-
-//Not now not with clean and auto-upload to curse, it just deletes it so there is no point
-//tasks.build.dependsOn sourceJar, javadocJar
 
 tasks.withType(JavaCompile) { task ->
     task.options.encoding = 'UTF-8'
