@@ -9,12 +9,11 @@ import java.util.ArrayList;
 
 @SideOnly(Side.CLIENT)
 public class KickButton extends GuiButton {
-
-    //ToDo: Add tooltip?
+    
     private ArrayList<String> tooltipLines = new ArrayList<>();
 
     public KickButton(int x, int y){
-        super(2, x, y, 40, 20, I18n.format("bedbugs.kickButtonText")); //mojang code
+        super(2, x, y, 60, 20, I18n.format("bedbugs.kickButtonText"));
         this.tooltipLines.clear();
         this.tooltipLines.add(I18n.format("bedbugs.kickButtonTooltipLine1"));
         this.tooltipLines.add(I18n.format("bedbugs.kickButtonTooltipLine2"));

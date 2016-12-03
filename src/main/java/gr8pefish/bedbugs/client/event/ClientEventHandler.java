@@ -25,7 +25,7 @@ public class ClientEventHandler {
 
             List<GuiButton> list = event.getButtonList(); //get all buttons
 
-            kickButton = new KickButton(event.getGui().width / 2 - 20, event.getGui().height - 60); //create KickButton
+            kickButton = new KickButton(event.getGui().width / 2 - 30, event.getGui().height - 70); //create KickButton
             kickButton.visible = false; //set invisible
             event.getButtonList().add(kickButton); //add my own Kick Button, default invisible
 
