@@ -1,6 +1,7 @@
 To Do:
 
-    Fix README
+    Get new API key when project changes and update to bed_bugs=x
+
 
     NOW:
 
@@ -9,7 +10,11 @@ To Do:
         DEFINITE:
 
         MAYBE:
+            Look into @NetworkCheckHandler to make it an optional client side mod if the server has it already
+
+        UNLIKELY:
             Investigate source cause of bug for button to fix the actual error
+
 
     EVENTUAL FEATURES:
 

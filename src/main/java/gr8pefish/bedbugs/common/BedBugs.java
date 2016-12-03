@@ -8,9 +8,10 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkCheckHandler;
 
 @Mod(modid = ModInfo.MODID, name = ModInfo.MOD_NAME, version = ModInfo.VERSION)
-public class BedBugs{
+public class BedBugs {
 
     //Proxies
     @SidedProxy(clientSide = ModInfo.CLIENT_PROXY, serverSide = ModInfo.COMMON_PROXY)
@@ -19,7 +20,6 @@ public class BedBugs{
     //Mod Instance
     @Mod.Instance
     public static BedBugs instance;
-
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
