@@ -2,10 +2,12 @@
 Version 1.10.2 - 1.0.1
 ------------------------------------------------------
 Additions
-- None
+- Added tooltip to the kick button to explain its usage.
 
 Changes
-- None
+- Changed mod name to the simpler title of "Bed Bugs".
+- Kick button only appears after you click the button to leave your bed (i.e. only when it's needed).
+- Changed position of kick button.
 
 Bug Fixes
 - None
