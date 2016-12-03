@@ -28,7 +28,7 @@ public class PacketServerKickPlayer implements IMessage {
             try {
                 ctx.getServerHandler().playerEntity.connection.kickPlayerFromServer("Leaving bed (and server).");
             } catch (Exception e) {
-                Logger.error("Can't kick player!");
+                Logger.error("Can't kick player! Please create a bug report on BedBugBuster's Github with details.");
             }
 
             return null; //no return message

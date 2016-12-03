@@ -1,7 +1,6 @@
 To Do:
 
     Fix README
-    Add button to the side of sleep button in vanilla that 1) gets out of bed actually or 2) kicks from server
 
     NOW:
         Fix kicking not working
@@ -16,6 +15,26 @@ To Do:
 
     EVENTUAL FEATURES:
 
+        Have it go to the appropriate screen: (see vanilla code below)
+            boolean flag = this.mc.isIntegratedServerRunning();
+            boolean flag1 = this.mc.isConnectedToRealms();
+            button.enabled = false;
+            this.mc.theWorld.sendQuittingDisconnectingPacket();
+            this.mc.loadWorld((WorldClient)null);
+
+            if (flag)
+            {
+                this.mc.displayGuiScreen(new GuiMainMenu());
+            }
+            else if (flag1)
+            {
+                RealmsBridge realmsbridge = new RealmsBridge();
+                realmsbridge.switchToRealms(new GuiMainMenu());
+            }
+            else
+            {
+                this.mc.displayGuiScreen(new GuiMultiplayer(new GuiMainMenu()));
+            }
 
 
 
