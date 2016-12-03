@@ -138,8 +138,6 @@ curseforge {
         releaseType = release_type.toString()
 
         addGameVersion '1.10.2'
-
-        relations curseRelations
     }
 }
 
