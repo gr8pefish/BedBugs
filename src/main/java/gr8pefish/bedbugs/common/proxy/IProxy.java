@@ -1,4 +1,4 @@
-package gr8pefish.bedbugbuster.common.proxy;
+package gr8pefish.bedbugs.common.proxy;
 
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;

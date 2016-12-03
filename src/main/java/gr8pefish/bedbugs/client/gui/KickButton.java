@@ -1,4 +1,4 @@
-package gr8pefish.bedbugbuster.client.gui;
+package gr8pefish.bedbugs.client.gui;
 
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.resources.I18n;
@@ -11,6 +11,6 @@ public class KickButton extends GuiButton {
     //ToDo: Add tooltip?
 
     public KickButton(int x, int y){
-        super(2, x, y, 40, 20, I18n.format("bedbugbuster.kickButtonText")); //mojang code
+        super(2, x, y, 40, 20, I18n.format("bedbugs.kickButtonText")); //mojang code
     }
 }

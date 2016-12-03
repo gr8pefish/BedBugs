@@ -1,8 +1,8 @@
-package gr8pefish.bedbugbuster.common;
+package gr8pefish.bedbugs.common;
 
-import gr8pefish.bedbugbuster.common.lib.ModInfo;
-import gr8pefish.bedbugbuster.common.network.PacketHandler;
-import gr8pefish.bedbugbuster.common.proxy.IProxy;
+import gr8pefish.bedbugs.common.lib.ModInfo;
+import gr8pefish.bedbugs.common.network.PacketHandler;
+import gr8pefish.bedbugs.common.proxy.IProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = ModInfo.MODID, name = ModInfo.MOD_NAME, version = ModInfo.VERSION)
-public class BedBugBuster {
+public class BedBugs{
 
     //Proxies
     @SidedProxy(clientSide = ModInfo.CLIENT_PROXY, serverSide = ModInfo.COMMON_PROXY)
@@ -18,7 +18,7 @@ public class BedBugBuster {
 
     //Mod Instance
     @Mod.Instance
-    public static BedBugBuster instance;
+    public static BedBugs instance;
 
 
     @Mod.EventHandler
@@ -41,4 +41,5 @@ public class BedBugBuster {
     public void postInit(FMLPostInitializationEvent event) {
         proxy.postInit(event);
     }
+
 }

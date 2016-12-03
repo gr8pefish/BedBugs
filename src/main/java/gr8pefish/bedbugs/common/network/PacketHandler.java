@@ -1,6 +1,6 @@
-package gr8pefish.bedbugbuster.common.network;
+package gr8pefish.bedbugs.common.network;
 
-import gr8pefish.bedbugbuster.common.lib.ModInfo;
+import gr8pefish.bedbugs.common.lib.ModInfo;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import net.minecraftforge.fml.relauncher.Side;
 

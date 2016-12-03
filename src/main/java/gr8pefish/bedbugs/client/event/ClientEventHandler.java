@@ -1,9 +1,8 @@
-package gr8pefish.bedbugbuster.client.event;
+package gr8pefish.bedbugs.client.event;
 
-import gr8pefish.bedbugbuster.client.gui.KickButton;
-import gr8pefish.bedbugbuster.common.network.PacketHandler;
-import gr8pefish.bedbugbuster.common.network.PacketServerKickPlayer;
-import net.minecraft.client.Minecraft;
+import gr8pefish.bedbugs.client.gui.KickButton;
+import gr8pefish.bedbugs.common.network.PacketHandler;
+import gr8pefish.bedbugs.common.network.PacketServerKickPlayer;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiSleepMP;
 import net.minecraftforge.client.event.GuiScreenEvent;

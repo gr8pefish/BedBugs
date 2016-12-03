@@ -1,4 +1,4 @@
-package gr8pefish.bedbugbuster.common.lib;
+package gr8pefish.bedbugs.common.lib;
 
 import net.minecraftforge.fml.common.FMLLog;
 import org.apache.logging.log4j.Level;
