@@ -15,18 +15,32 @@ import java.util.List;
 @SideOnly(Side.CLIENT)
 public class ClientEventHandler {
 
+
     @SubscribeEvent
     public void onSleepGui(GuiScreenEvent.InitGuiEvent.Post event){
-        if (event.getGui() instanceof GuiSleepMP) { //sleepGui
-            List<GuiButton> list = event.getButtonList();
-            event.getButtonList().add((new KickButton(event.getGui().width / 2 + 100, event.getGui().height - 40)));
-            event.setButtonList(list);
+        if (event.getGui() instanceof GuiSleepMP) { //sleep GUI
+
+            List<GuiButton> list = event.getButtonList(); //get all buttons
+
+            KickButton kickButton = new KickButton(event.getGui().width / 2 + 100, event.getGui().height - 40); //create KickButton
+            kickButton.visible = false; //set invisible
+            event.getButtonList().add(kickButton); //add my own Kick Button, default invisible
+
+            event.setButtonList(list); //update button list
         }
     }
 
     @SubscribeEvent
     public void onClick(GuiScreenEvent.ActionPerformedEvent.Pre event) {
-        if (event.getGui() instanceof GuiSleepMP) {
+        if (event.getGui() instanceof GuiSleepMP) { //sleep GUI
+            if (event.getButton().id == 1) { //normal 'Leave Bed' button clicked
+                for (GuiButton button : event.getButtonList()) { //loop through all buttons on screen
+                    if (button instanceof KickButton) { //find kick button
+                        button.visible = true; //set it to visible
+                    }
+                }
+                event.setCanceled(true); //testing purposes
+            }
             if (event.getButton() instanceof KickButton) {
                 PacketHandler.HANDLER.sendToServer(new PacketServerKickPlayer());
             }
