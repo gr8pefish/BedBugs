@@ -78,6 +78,11 @@ jar {
     )
 }
 
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    from javadoc.destinationDir
+    classifier = 'javadoc'
+}
+
 tasks.withType(JavaCompile) { task ->
     task.options.encoding = 'UTF-8'
 }
@@ -125,7 +130,7 @@ String getChangelogText() {
 
 curseforge {
     if (project.hasProperty('curse_key_bed_bug_buster'))
-        apiKey = project.curse_key_open_glider
+        apiKey = project.curse_key_bed_bug_buster
 
     project {
         id = "${curse_id}"
