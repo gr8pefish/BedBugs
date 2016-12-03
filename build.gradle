@@ -125,6 +125,7 @@ String getChangelogText() {
         }
         done = true // once we go past the first version block, parse no more
     }
+    str += "\n Look here for all 1.10 versions' changelogs: https://github.com/gr8pefish/BedBugBuster/blob/1.10/changelog.txt"
     return str
 }
 
