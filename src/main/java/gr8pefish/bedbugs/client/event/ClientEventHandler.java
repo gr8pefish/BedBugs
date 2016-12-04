@@ -59,12 +59,12 @@ public class ClientEventHandler {
      * @param event - button click event
      */
     @SubscribeEvent
-    public void onClick(GuiScreenEvent.ActionPerformedEvent.Pre event) { //ToDo: switch to post for production
+    public void onClick(GuiScreenEvent.ActionPerformedEvent.Post event) { //ToDo: switch to post for production, pre for testing
         if (event.getGui() instanceof GuiSleepMP) { //sleep GUI
 
             if (event.getButton().id == 1) { //normal 'Leave Bed' button clicked
                 if (showButton == false) showButton = true; //boolean to start timer to show the kick button
-                event.setCanceled(true); //ToDo: For testing purposes, remove in production!
+//                event.setCanceled(true); //ToDo: For testing purposes, remove in production!
             }
 
             //if kick button clicked then handle that
