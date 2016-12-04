@@ -24,6 +24,10 @@ public class CommonProxy implements IProxy {
 
     }
 
+    /**
+     * Handle a player being kicked from a server, server-side logic.
+     * @param player - the player; used in the kick method
+     */
     @Override
     public void handleKick(EntityPlayerMP player) {
         if (player != null)

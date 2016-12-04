@@ -21,8 +21,7 @@ public class ClientProxy implements IProxy {
 
     @Override
     public void preInit(FMLPreInitializationEvent event) {
-        //register client events
-        MinecraftForge.EVENT_BUS.register(new ClientEventHandler());
+        MinecraftForge.EVENT_BUS.register(new ClientEventHandler()); //register client events
     }
 
     @Override
@@ -35,6 +34,10 @@ public class ClientProxy implements IProxy {
 
     }
 
+    /**
+     * Handle a player being kicked from a server, client-side logic.
+     * @param player - the player; unused (used in CommonProxy)
+     */
     @Override
     public void handleKick(EntityPlayerMP player) {
 
@@ -44,15 +47,15 @@ public class ClientProxy implements IProxy {
         boolean realms = mc.isConnectedToRealms();
 
         mc.theWorld.sendQuittingDisconnectingPacket();
-        mc.loadWorld((WorldClient)null);
+        mc.loadWorld((WorldClient)null); //It's vanilla code, don't blame me :P
 
         if (singleplayer) {
-            mc.displayGuiScreen(new GuiWorldSelection(new GuiMainMenu())); //ToDo: Keep as-is, or just go to main menu?
-        } else if (realms) {
+            mc.displayGuiScreen(new GuiWorldSelection(new GuiMainMenu())); //show singleplayer world selection screen //ToDo: Keep as-is, or just go to main menu?
+        } else if (realms) { //do realms stuff (untested as it will likely never be used)
             RealmsBridge realmsbridge = new RealmsBridge();
             realmsbridge.switchToRealms(new GuiMainMenu());
         } else {
-            mc.displayGuiScreen(new GuiMultiplayer(new GuiMainMenu()));
+            mc.displayGuiScreen(new GuiMultiplayer(new GuiMainMenu())); //show multiplayer server selection screen
         }
     }
 }

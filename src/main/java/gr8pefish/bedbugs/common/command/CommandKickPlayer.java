@@ -14,8 +14,10 @@ import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 
+// Registered server side only (check the bottom of BedBugs.java)
 public class CommandKickPlayer extends CommandBase {
 
+    // The strings used in the command in one place
     private final String BEDBUGS = "bedbugs";
     private final String KICK = "kick";
     private final String PLAYER = "[player]";
@@ -33,7 +35,7 @@ public class CommandKickPlayer extends CommandBase {
 
     @Override
     public int getRequiredPermissionLevel(){
-        return 2;
+        return 2; //Best guess, not sure on the perfect level
     }
 
     @Override

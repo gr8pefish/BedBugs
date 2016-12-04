@@ -13,5 +13,6 @@ public interface IProxy {
 
     public void postInit(FMLPostInitializationEvent event);
 
+    // Handle the logic of kicking a player
     public void handleKick(EntityPlayerMP player);
 }

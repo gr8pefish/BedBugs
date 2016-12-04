@@ -1,5 +1,8 @@
 package gr8pefish.bedbugs.common.lib;
 
+/**
+ * All the basic information about the mod (that shouldn't ever change)
+ */
 public class ModInfo {
 
     public static final String VERSION = "@VERSION@";

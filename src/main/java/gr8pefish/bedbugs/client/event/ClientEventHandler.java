@@ -30,7 +30,7 @@ public class ClientEventHandler {
     /**
      * Initializes the gui by adding a kick button invisibly.
      *
-     * @param event
+     * @param event - init gui event
      */
     @SubscribeEvent
     public void onSleepGui(GuiScreenEvent.InitGuiEvent.Post event){
@@ -56,7 +56,7 @@ public class ClientEventHandler {
     /**
      * Makes the button possible to be visible, or handles KickButton clicks.
      *
-     * @param event
+     * @param event - button click event
      */
     @SubscribeEvent
     public void onClick(GuiScreenEvent.ActionPerformedEvent.Pre event) { //ToDo: switch to post for production
@@ -64,7 +64,7 @@ public class ClientEventHandler {
 
             if (event.getButton().id == 1) { //normal 'Leave Bed' button clicked
                 if (showButton == false) showButton = true; //boolean to start timer to show the kick button
-//                event.setCanceled(true); //ToDo: For testing purposes, remove in production!
+                event.setCanceled(true); //ToDo: For testing purposes, remove in production!
             }
 
             //if kick button clicked then handle that

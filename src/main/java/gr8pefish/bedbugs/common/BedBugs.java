@@ -13,8 +13,6 @@ import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 @Mod(modid = ModInfo.MODID, name = ModInfo.MOD_NAME, version = ModInfo.VERSION, acceptableRemoteVersions = ModInfo.ACCEPTABLE_REMOTE_VERSION)
 public class BedBugs {
 
-    public static boolean isBedBugsPresentOnDedicatedServer;
-
     //Proxies
     @SidedProxy(clientSide = ModInfo.CLIENT_PROXY, serverSide = ModInfo.COMMON_PROXY)
     public static IProxy proxy;
