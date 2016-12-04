@@ -1,16 +1,17 @@
 To Do:
 
-    Get new API key when project changes and update to bed_bugs=x
-    Add server command to support clients without the mod
-
     NOW:
+        Get new API key when project changes and update .gradle home file to allow uploading
+            Make sure ReadMe still okay
 
     LATER:
 
         DEFINITE:
+            Change license to LGLPV3
+            Fix bug of message not showing correctly via command based kick in singleplayer
 
         MAYBE:
-            Look into @NetworkCheckHandler to make it an optional client side mod if the server has it already
+            Work on diverting to custom screens instead
             PR onGuiClosedEvent?
 
         UNLIKELY:
@@ -18,27 +19,6 @@ To Do:
 
 
     EVENTUAL FEATURES:
-
-        Have it go to the appropriate screen: (see vanilla code below)
-            boolean flag = this.mc.isIntegratedServerRunning();
-            boolean flag1 = this.mc.isConnectedToRealms();
-            button.enabled = false;
-            this.mc.theWorld.sendQuittingDisconnectingPacket();
-            this.mc.loadWorld((WorldClient)null);
-
-            if (flag)
-            {
-                this.mc.displayGuiScreen(new GuiMainMenu());
-            }
-            else if (flag1)
-            {
-                RealmsBridge realmsbridge = new RealmsBridge();
-                realmsbridge.switchToRealms(new GuiMainMenu());
-            }
-            else
-            {
-                this.mc.displayGuiScreen(new GuiMultiplayer(new GuiMainMenu()));
-            }
 
 
 
