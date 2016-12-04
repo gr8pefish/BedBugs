@@ -1,11 +1,7 @@
 package gr8pefish.bedbugs.client.gui;
 
-import gr8pefish.bedbugs.common.BedBugs;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.resources.I18n;
-import net.minecraft.server.MinecraftServer;
-import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
