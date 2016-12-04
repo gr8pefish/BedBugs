@@ -2,7 +2,6 @@ package gr8pefish.bedbugs.common;
 
 import gr8pefish.bedbugs.common.command.CommandKickPlayer;
 import gr8pefish.bedbugs.common.lib.ModInfo;
-import gr8pefish.bedbugs.common.network.PacketHandler;
 import gr8pefish.bedbugs.common.proxy.IProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -32,7 +31,7 @@ public class BedBugs {
     public void preInit(FMLPreInitializationEvent event) {
         
         //register packets
-        PacketHandler.init();
+//        PacketHandler.init();
 
         //init client event handler
         proxy.preInit(event);

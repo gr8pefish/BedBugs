@@ -1,8 +1,7 @@
 package gr8pefish.bedbugs.client.event;
 
 import gr8pefish.bedbugs.client.gui.KickButton;
-import gr8pefish.bedbugs.common.network.PacketHandler;
-import gr8pefish.bedbugs.common.network.PacketServerKickPlayer;
+import gr8pefish.bedbugs.common.BedBugs;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiSleepMP;
@@ -67,7 +66,7 @@ public class ClientEventHandler {
             }
 
             if (event.getButton() instanceof KickButton) {
-                PacketHandler.HANDLER.sendToServer(new PacketServerKickPlayer());
+                BedBugs.proxy.handleKick(null);
             }
         }
     }

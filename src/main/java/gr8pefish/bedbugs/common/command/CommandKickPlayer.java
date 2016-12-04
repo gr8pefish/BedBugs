@@ -1,5 +1,6 @@
 package gr8pefish.bedbugs.common.command;
 
+import gr8pefish.bedbugs.common.BedBugs;
 import gr8pefish.bedbugs.common.lib.Logger;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
@@ -7,7 +8,6 @@ import net.minecraft.command.ICommandSender;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.translation.I18n;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -42,15 +42,13 @@ public class CommandKickPlayer extends CommandBase {
             if (params[0].equalsIgnoreCase(KICK)) { //kick command
                 if (params.length == 2) { //name supplied
                     try {
-                        EntityPlayerMP playerMP = getPlayer(server, sender, params[1]);
-                        playerMP.connection.kickPlayerFromServer(I18n.translateToLocal("bedbugs.kickServerMessage"));
+                        BedBugs.proxy.handleKick(getPlayer(server, sender, params[1]));
                     } catch (Exception e) {
                         Logger.warn("Couldn't process command to kick the player!");
                     }
                 } else { //do it for whoever did the command
                     try {
-                        EntityPlayerMP player = (EntityPlayerMP)sender.getCommandSenderEntity();
-                        player.connection.kickPlayerFromServer(I18n.translateToLocal("bedbugs.kickServerMessage"));
+                        BedBugs.proxy.handleKick((EntityPlayerMP)sender.getCommandSenderEntity());
                     } catch (Exception e) {
                         Logger.warn("Couldn't process command to kick the player!");
                     }
