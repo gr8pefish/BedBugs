@@ -1,5 +1,5 @@
 ------------------------------------------------------
-Version 1.10.2 - 1.0.1
+Version 1.10.2 - 1.1.0
 ------------------------------------------------------
 Additions
 - Added tooltip (with delayed appearance) to the kick button to explain its usage.
