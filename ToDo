@@ -1,16 +1,15 @@
 To Do:
 
     NOW:
-        Get new API key when project changes and update .gradle home file to allow uploading
-            Make sure ReadMe still okay
 
     LATER:
 
         DEFINITE:
-            Change license to LGLPV3
-            Fix bug of message not showing correctly via command based kick in singleplayer
+            Look into bug where game freezes entirely
 
         MAYBE:
+            Fix bug of message not showing correctly via command based kick in singleplayer
+
             Work on diverting to custom screens instead
             PR onGuiClosedEvent?
 
