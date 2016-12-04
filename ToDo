@@ -21,6 +21,7 @@ To Do:
             Investigate source cause of bug for button to fix the actual error
                 Teleport/change dimensions (just unload chunk perhaps)
                 Block by bed?
+                Client/Server desync is the culprit?
 
     EVENTUAL FEATURES:
 
