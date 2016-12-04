@@ -44,8 +44,6 @@ public class CommandKickPlayer extends CommandBase {
                     try {
                         EntityPlayerMP playerMP = getPlayer(server, sender, params[1]);
                         playerMP.connection.kickPlayerFromServer(I18n.translateToLocal("bedbugs.kickServerMessage"));
-                        if (!server.isDedicatedServer())
-                            server.initiateShutdown();
                     } catch (Exception e) {
                         Logger.warn("Couldn't process command to kick the player!");
                     }
@@ -53,8 +51,6 @@ public class CommandKickPlayer extends CommandBase {
                     try {
                         EntityPlayerMP player = (EntityPlayerMP)sender.getCommandSenderEntity();
                         player.connection.kickPlayerFromServer(I18n.translateToLocal("bedbugs.kickServerMessage"));
-                        if (!server.isDedicatedServer())
-                            server.initiateShutdown();
                     } catch (Exception e) {
                         Logger.warn("Couldn't process command to kick the player!");
                     }

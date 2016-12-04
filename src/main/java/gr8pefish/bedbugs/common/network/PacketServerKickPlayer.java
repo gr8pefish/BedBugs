@@ -28,8 +28,6 @@ public class PacketServerKickPlayer implements IMessage {
 
             try {
                 ctx.getServerHandler().playerEntity.connection.kickPlayerFromServer(I18n.translateToLocal("bedbugs.kickServerMessage"));
-                if (!ctx.getServerHandler().playerEntity.getServer().isDedicatedServer())
-                    ctx.getServerHandler().playerEntity.getServer().initiateShutdown();
             } catch (Exception e) {
                 Logger.error("Can't kick player! Please create a bug report on BedBugs's Github with details.");
             }
