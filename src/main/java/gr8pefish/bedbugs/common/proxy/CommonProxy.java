@@ -31,7 +31,7 @@ public class CommonProxy implements IProxy {
     @Override
     public void handleKick(EntityPlayerMP player) {
         if (player != null)
-            player.connection.kickPlayerFromServer(I18n.translateToLocal("bedbugs.kickServerMessage")); //ToDo: Localize correctly
+            player.connection.disconnect(I18n.translateToLocal("bedbugs.kickServerMessage")); //ToDo: Localize correctly
         else
             Logger.warn("Can't kick player!");
     }
