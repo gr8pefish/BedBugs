@@ -4,3 +4,6 @@ run/
 .idea/
 *.iml
 *.xcf
+*.hprof
+*.ipr
+*.iws
