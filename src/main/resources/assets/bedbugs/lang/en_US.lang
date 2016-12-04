@@ -3,7 +3,4 @@ bedbugs.kickButtonText=Kick Me
 bedbugs.kickButtonTooltipLine1=Disconnects you from the server,
 bedbugs.kickButtonTooltipLine2=allowing you to quickly rejoin and exit your bed.
 
-bedbugs.kickButtonTooltipAddServerLine1=This button won't work unless Bed Bugs
-bedbugs.kickButtonTooltipAddServerLine2=is also installed on the server.
-
 bedbugs.kickServerMessage=Leaving bed (and server)
