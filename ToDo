@@ -19,7 +19,8 @@ To Do:
 
         UNLIKELY:
             Investigate source cause of bug for button to fix the actual error
-
+                Teleport/change dimensions (just unload chunk perhaps)
+                Block by bed?
 
     EVENTUAL FEATURES:
 
