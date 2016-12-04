@@ -55,7 +55,7 @@ public class BedBugs {
     @NetworkCheckHandler
     public boolean checkModList(final Map<String, String> versions, final Side side) {
         if (side == Side.SERVER) { //remote party, "asking" from client
-            isBedBugsPresentOnDedicatedServer = versions.containsKey(ModInfo.MOD_NAME);
+            isBedBugsPresentOnDedicatedServer = versions.containsKey(ModInfo.MODID);
         }
         return true; //allow any client to connect, regardless of if they have the mod or not
     }
