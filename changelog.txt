@@ -2,7 +2,7 @@
 Version 1.11 - 1.1.4
 ------------------------------------------------------
 Additions
-- None
+- Added German translation file (Thanks ACGaming!)
 
 Changes
 - None
