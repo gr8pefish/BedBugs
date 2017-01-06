@@ -4,3 +4,5 @@ run/
 .idea/
 *.iml
 *.xcf
+BedBugs.iws
+BedBugs.ipr
