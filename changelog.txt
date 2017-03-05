@@ -1,8 +1,19 @@
 ------------------------------------------------------
-Version 1.10.2 - 1.1.5
+Version 1.10.2 - 1.1.6
 ------------------------------------------------------
 Additions
 - None
+
+Changes
+- None
+
+Bug Fixes
+- None
+------------------------------------------------------
+Version 1.10.2 - 1.1.5
+------------------------------------------------------
+Additions
+- Half completed messages no longer disappear when waking up.
 
 Changes
 - None

@@ -2,12 +2,18 @@ package gr8pefish.bedbugs.client.event;
 
 import gr8pefish.bedbugs.client.gui.KickButton;
 import gr8pefish.bedbugs.common.BedBugs;
+import gr8pefish.bedbugs.common.lib.Logger;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
+import net.minecraft.client.gui.GuiChat;
 import net.minecraft.client.gui.GuiSleepMP;
+import net.minecraft.client.gui.GuiTextField;
+import net.minecraft.util.StringUtils;
 import net.minecraftforge.client.event.GuiScreenEvent;
 import net.minecraftforge.fml.client.config.GuiUtils;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent;
+import net.minecraftforge.fml.relauncher.ReflectionHelper;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -91,6 +97,41 @@ public class ClientEventHandler {
             boolean hovering = (kickButton != null && kickButton.visible && kickButton.isMouseInButton(event.getMouseX(), event.getMouseY()));
             handleCounter(hovering, hoverShowLimit, CounterType.SHOW_TOOLTIP, event);
 
+        }
+    }
+
+    /**
+     * For letting chat persist through waking up.
+     * Some reflection used.
+     *
+     * @param event - the client tick event
+     */
+    @SubscribeEvent
+    public void onTick(TickEvent.ClientTickEvent event) throws Throwable {
+
+        if (event.phase.equals(TickEvent.Phase.START)) { //pre-tick
+
+            Minecraft mc = Minecraft.getMinecraft();
+            if (mc.currentScreen != null && mc.currentScreen instanceof GuiSleepMP && !mc.thePlayer.isPlayerSleeping()) { //if not sleeping but GuiSleep open
+
+                //wrap in try block, as we are reflecting
+                try { //check if the player typed anything in chat box
+
+                    //deobfuscated and obfuscated names
+                    String[] INPUT_FIELD = {"inputField", "field_146415_a", "a"};
+                    //reflect to get the value
+                    String typed = ((GuiTextField) ReflectionHelper.findField(GuiChat.class, INPUT_FIELD).get((GuiSleepMP) mc.currentScreen)).getText();
+                    //if something actually typed
+                    if (!StringUtils.isNullOrEmpty(typed)) {
+                        //display a new screen with the text typed
+                        mc.displayGuiScreen(new GuiChat(typed));
+                        //no need to cancel the event, as by changing the screen we alter it already and can let vanilla take over
+                    }
+
+                } catch (Exception e) {
+                    Logger.fatal("Couldn't reflect GuiChat.inputField successfully. Chat won't persist through awakening.");
+                }
+            }
         }
     }
 
