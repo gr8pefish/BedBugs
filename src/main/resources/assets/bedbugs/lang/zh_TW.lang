@@ -1,0 +1,6 @@
+bedbugs.kickButtonText=踢除我
+
+bedbugs.kickButtonTooltipLine1=斷開你和伺服器的連接，
+bedbugs.kickButtonTooltipLine2=讓你快速的離開床上和重新進入
+
+bedbugs.kickServerMessage=離開床 (和伺服器)

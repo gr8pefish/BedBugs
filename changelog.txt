@@ -1,8 +1,19 @@
 ------------------------------------------------------
-Version 1.11.2 - 1.1.7
+Version 1.11.2 - 1.1.8
 ------------------------------------------------------
 Additions
 - None
+
+Changes
+- None
+
+Bug Fixes
+- None
+------------------------------------------------------
+Version 1.11.2 - 1.1.7
+------------------------------------------------------
+Additions
+- Add chinese and simplified chinese translation files (thanks
 
 Changes
 - None
