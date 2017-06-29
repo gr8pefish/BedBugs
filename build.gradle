@@ -124,7 +124,7 @@ String getChangelogText() {
         }
         done = true // once we go past the first version block, parse no more
     }
-    str += "\n Look here for all 1.10 versions' changelogs: https://github.com/gr8pefish/BedBugs/blob/1.10/changelog.txt"
+    str += "\n Look here for all 1.12 versions' changelogs: https://github.com/gr8pefish/BedBugs/blob/1.12/changelog.txt"
     return str
 }
 
@@ -137,14 +137,14 @@ curseforge {
         changelog = getChangelogText()
         releaseType = release_type.toString()
 
-        addGameVersion '1.10.2'
+        addGameVersion '1.12'
     }
 }
 
 task incrementVersionNumber {
     ant.replace(file: "gradle.properties", token: "build_number=${build_number}", value: "build_number=${build_number.toString().toInteger() + 1}") //need to make sure it only increments build number
-    ant.replace(file: "README.md", token: "[![](https://img.shields.io/badge/1.10.2_status-release-green.svg)](https://minecraft.curseforge.com/projects/bed-bugs/files?filter-game-version=1738749986%3A572&filter-status=1)\n" +
-            "[![](https://img.shields.io/badge/Latest_version-${major_version}.${minor_version}.${build_number.toString().toInteger() - 1}", value: "[![](https://img.shields.io/badge/1.10.2_status-release-green.svg)](https://minecraft.curseforge.com/projects/bed-bugs/files?filter-game-version=1738749986%3A572&filter-status=1)\n" +
+    ant.replace(file: "README.md", token: "[![](https://img.shields.io/badge/1.12_status-beta-yellow.svg)](https://minecraft.curseforge.com/projects/bed-bugs/files?filter-status=1&filter-game-version=1738749986%3A628)\n" +
+            "[![](https://img.shields.io/badge/Latest_version-${major_version}.${minor_version}.${build_number.toString().toInteger() - 1}", value: "[![](https://img.shields.io/badge/1.12_status-beta-yellow.svg)](https://minecraft.curseforge.com/projects/bed-bugs/files?filter-status=1&filter-game-version=1738749986%3A628)\n" +
             "[![](https://img.shields.io/badge/Latest_version-${major_version}.${minor_version}.${build_number}") //replace README 1.10 badge version with CURRENT build
 }
 

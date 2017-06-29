@@ -1,12 +1,16 @@
 # Bed Bugs [![](http://cf.way2muchnoise.eu/full_254508_downloads.svg)](https://minecraft.curseforge.com/projects/bed-bugs) [![](http://cf.way2muchnoise.eu/versions/For%20MC_254508_all.svg)](https://minecraft.curseforge.com/projects/bed-bugs)
 
+[![](https://img.shields.io/badge/1.12_status-beta-yellow.svg)](https://minecraft.curseforge.com/projects/bed-bugs/files?filter-status=1&filter-game-version=1738749986%3A628)
+[![](https://img.shields.io/badge/Latest_version-1.0.1-blue.svg)](https://minecraft.curseforge.com/projects/bed-bugs/files?filter-status=1&filter-game-version=1738749986%3A628)
+[![](https://img.shields.io/badge/Supported-Fully-brightgreen.svg)](https://minecraft.curseforge.com/projects/bed-bugs/files?filter-status=1&filter-game-version=1738749986%3A628)
+
 [![](https://img.shields.io/badge/1.11.2_status-release-green.svg)](https://minecraft.curseforge.com/projects/bed-bugs/files?filter-game-version=2020709689%3A6317&filter-status=1)
-[![](https://img.shields.io/badge/Latest_version-1.1.3-blue.svg)](https://minecraft.curseforge.com/projects/bed-bugs/files?filter-game-version=2020709689%3A6317&filter-status=1)
-[![](https://img.shields.io/badge/Supported-Fully-brightgreen.svg)](https://minecraft.curseforge.com/projects/bed-bugs/files?filter-game-version=2020709689%3A6317&filter-status=1)
+[![](https://img.shields.io/badge/Latest_version-1.1.7-blue.svg)](https://minecraft.curseforge.com/projects/bed-bugs/files?filter-game-version=2020709689%3A6317&filter-status=1)
+[![](https://img.shields.io/badge/Supported-Bugfixes-yellow.svg)](https://minecraft.curseforge.com/projects/bed-bugs/files?filter-game-version=2020709689%3A6317&filter-status=1)
 
 [![](https://img.shields.io/badge/1.10.2_status-release-green.svg)](https://minecraft.curseforge.com/projects/bed-bugs/files?filter-game-version=1738749986%3A572&filter-status=1)
 [![](https://img.shields.io/badge/Latest_version-1.1.6-blue.svg)](https://minecraft.curseforge.com/projects/bed-bugs/files?filter-game-version=1738749986%3A572&filter-status=1)
-[![](https://img.shields.io/badge/Supported-Fully-brightgreen.svg)](https://minecraft.curseforge.com/projects/bed-bugs/files?filter-game-version=1738749986%3A572&filter-status=1)
+[![](https://img.shields.io/badge/Supported-Bugfixes-yellow.svg)](https://minecraft.curseforge.com/projects/bed-bugs/files?filter-game-version=1738749986%3A572&filter-status=1)
 
 Bed Bugs is a [Minecraft](https://minecraft.net/) mod that adds a button to kick the player from the server when sleeping, allowing you to escape beds when stuck in them.
 
