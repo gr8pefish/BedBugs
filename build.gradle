@@ -5,17 +5,16 @@ buildscript {
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
     }
     dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT'
-        classpath 'org.ajoberstar:gradle-git:0.10.1'
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
     }
 }
-
 plugins {
     id "net.minecraftforge.gradle.forge" version "2.0.2"
-    id 'com.matthewprenger.cursegradle' version '1.0.7'
+    id 'com.matthewprenger.cursegradle' version '1.0.9'
 }
 
 apply plugin: 'net.minecraftforge.gradle.forge'
+apply plugin: 'com.matthewprenger.cursegradle'
 apply plugin: 'maven-publish'
 
 //set it so it has to be java 8
@@ -149,7 +148,7 @@ task incrementVersionNumber {
             "[![](https://img.shields.io/badge/Latest_version-${major_version}.${minor_version}.${build_number}") //replace README 1.10 badge version with CURRENT build
 }
 
-//Adds a new changelog segment for the next 1.7.10. Nifty!
+//Adds a new changelog segment for the next version. Nifty!
 task makeNewChangelog {
     def changelogFile = new File('changelog.txt')
     String newText = '------------------------------------------------------\n' +

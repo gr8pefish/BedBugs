@@ -20,7 +20,7 @@ public class KickButton extends GuiButton {
 
     // Checks if the mouse is hovering over the button
     public boolean isMouseInButton(int mousePosX, int mousePosY){
-        return (mousePosX >= this.xPosition && mousePosY >= this.yPosition && mousePosX < this.xPosition + this.width && mousePosY < this.yPosition + this.height);
+        return (mousePosX >= this.x && mousePosY >= this.y && mousePosX < this.x + this.width && mousePosY < this.y + this.height);
     }
 
     public ArrayList<String> getTooltipLines() {

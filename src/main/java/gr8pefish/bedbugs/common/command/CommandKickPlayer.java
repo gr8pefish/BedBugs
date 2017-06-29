@@ -24,12 +24,12 @@ public class CommandKickPlayer extends CommandBase {
     private final String KICK_COMMAND = "/"+BEDBUGS+" "+KICK+" "+PLAYER;
 
     @Override
-    public String getCommandName() {
+    public String getName() {
         return BEDBUGS;
     }
 
     @Override
-    public String getCommandUsage(ICommandSender sender) {
+    public String getUsage(ICommandSender sender) {
         return KICK_COMMAND;
     }
 
@@ -57,18 +57,18 @@ public class CommandKickPlayer extends CommandBase {
                 }
             }
         } else {
-            throw new CommandException(getCommandUsage(sender));
+            throw new CommandException(getUsage(sender));
         }
     }
 
     @Nonnull
     @Override
-    public List<String> getTabCompletionOptions(MinecraftServer server, ICommandSender sender, String[] args, @Nullable BlockPos pos) {
+    public List<String> getTabCompletions(MinecraftServer server, ICommandSender sender, String[] args, @Nullable BlockPos pos) {
         List<String> tabCompletion = new ArrayList<String>();
         if (args.length <= 1) //no name, match string
             tabCompletion.addAll(getListOfStringsMatchingLastWord(args, KICK));
         else //match name
-            tabCompletion.addAll(getListOfStringsMatchingLastWord(args, server.getAllUsernames()));
+            tabCompletion.addAll(getListOfStringsMatchingLastWord(args, server.getOnlinePlayerNames()));
         return tabCompletion;
     }
 

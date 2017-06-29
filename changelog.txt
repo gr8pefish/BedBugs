@@ -1,70 +1,11 @@
 ------------------------------------------------------
-Version 1.10.2 - 1.1.7
+Version 1.12 - 1.0.0 (versioning: major-minor-build)
 ------------------------------------------------------
-Additions
-- None
-
-Changes
-- None
-
-Bug Fixes
-- None
-------------------------------------------------------
-Version 1.10.2 - 1.1.6
-------------------------------------------------------
-Additions
-- Added Chinese translation files (thanks Gonz0o11)
-
-Changes
-- None
-
-Bug Fixes
-- None
-------------------------------------------------------
-Version 1.10.2 - 1.1.5
-------------------------------------------------------
-Additions
-- Half completed messages no longer disappear when waking up.
-
-Changes
-- None
-
-Bug Fixes
-- None
-------------------------------------------------------
-Version 1.10.2 - 1.1.4
-------------------------------------------------------
-Additions
-- Added German translation file (Thanks ACGaming!)
-
-Changes
-- None
-
-Bug Fixes
-- None
-------------------------------------------------------
-Version 1.10.2 - 1.1.3
-------------------------------------------------------
-Additions
-- Added tooltip (with delayed appearance) to the kick button to explain its usage.
-- Added server command to kick the player.
-
-Changes
-- Changed mod name to the simpler title of "Bed Bugs".
-- Kick button only appears (after a very small delay) after you click the button to leave your bed (i.e. only when it's needed).
-- Changed special handling for client-only/server-only/any combination of the two installs of this mod.
-- Changed position of kick button.
-- Lots of internal cleanup/comments added.
-
-Bug Fixes
-- None
-------------------------------------------------------
-Version 1.10.2 - 1.0.0 (versioning: major-minor-build)
-------------------------------------------------------
-Initial Creation
+Initial Port to 1.12
+Same as 1.10-1.0.7
 
 Additions
-- Button to kick the player from the bed when sleeping.
+- None
 
 Changes
 - None

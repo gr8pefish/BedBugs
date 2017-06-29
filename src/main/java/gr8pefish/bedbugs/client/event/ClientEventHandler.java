@@ -112,7 +112,7 @@ public class ClientEventHandler {
         if (event.phase.equals(TickEvent.Phase.START)) { //pre-tick
 
             Minecraft mc = Minecraft.getMinecraft();
-            if (mc.currentScreen != null && mc.currentScreen instanceof GuiSleepMP && !mc.thePlayer.isPlayerSleeping()) { //if not sleeping but GuiSleep open
+            if (mc.currentScreen != null && mc.currentScreen instanceof GuiSleepMP && !mc.player.isPlayerSleeping()) { //if not sleeping but GuiSleep open
 
                 //wrap in try block, as we are reflecting
                 try { //check if the player typed anything in chat box
@@ -204,7 +204,7 @@ public class ClientEventHandler {
 
             case SHOW_TOOLTIP: //for making the tooltip visible
                 //draw the tooltip
-                GuiUtils.drawHoveringText(kickButton.getTooltipLines(), event.getMouseX(), event.getMouseY(), event.getGui().width, event.getGui().height, 300, Minecraft.getMinecraft().fontRendererObj);
+                GuiUtils.drawHoveringText(kickButton.getTooltipLines(), event.getMouseX(), event.getMouseY(), event.getGui().width, event.getGui().height, 300, Minecraft.getMinecraft().fontRenderer);
                 break;
 
         }

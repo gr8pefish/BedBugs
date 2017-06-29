@@ -46,7 +46,7 @@ public class ClientProxy implements IProxy {
         boolean singleplayer = mc.isIntegratedServerRunning();
         boolean realms = mc.isConnectedToRealms();
 
-        mc.theWorld.sendQuittingDisconnectingPacket();
+        mc.world.sendQuittingDisconnectingPacket();
         mc.loadWorld((WorldClient)null); //It's vanilla code, don't blame me :P
 
         if (singleplayer) {
